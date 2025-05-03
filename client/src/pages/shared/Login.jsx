@@ -43,8 +43,7 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row">
-      
+<div className="min-h-full lg:min-h-screen flex flex-col lg:flex-row">
       {/* Left Form Side */}
       <div className="flex-1 flex items-center justify-center bg-white px-6 py-12">
         <div className="w-full max-w-md space-y-6">

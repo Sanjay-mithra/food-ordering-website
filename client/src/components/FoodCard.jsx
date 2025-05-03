@@ -26,12 +26,12 @@ function FoodCard({ food }) {
   }
 
   return (
-    <div className="card bg-base-100 w-full max-w-sm shadow-sm mt-5 flex flex-col h-[400px] sm:h-[450px]">
+    <div className="card bg-base-100 w-full max-w-sm shadow-sm mt-5 flex flex-col h-[380px] sm:h-[420px]">
       <figure className="flex-shrink-0 overflow-hidden">
         <img
           src={food.image}
           alt={food.name}
-          className="w-full h-48 sm:h-56 object-cover"
+          className="w-full h-44 sm:h-52 object-cover"
         />
       </figure>
 
@@ -41,10 +41,7 @@ function FoodCard({ food }) {
           {food.description?.slice(0, 50)}
           {food.description?.length > 50 ? "..." : ""}
         </p>
-        <p className="text-sm text-gray-500">
-          <span className="text-primary font-semibold">Restaurant:</span>{" "}
-          {food.restaurant?.name}, {food.restaurant?.location}
-        </p>
+        {/* Restaurant info removed */}
         <div className="mt-auto card-actions flex flex-col sm:flex-row justify-between items-center">
           <p className="text-lg font-semibold text-gray-800 mb-2 sm:mb-0">
             ₹ {food.price}

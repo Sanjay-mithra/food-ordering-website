@@ -33,6 +33,7 @@
           setRestaurants([{ _id: '', name: 'All Restaurants' }, ...allRestaurants]);
 
           const resFoods = await getAllFoods();
+          console.log(resFoods);
           setFoods(resFoods?.data?.foods || []);
         } catch (err) {
           console.error("Error fetching data:", err);
@@ -86,7 +87,7 @@
             </div>
           </div>
 
-          <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-6 container">
             {menu.map((item, index) => (
               <div key={index} className="flex flex-col items-center">
                 <img
@@ -95,6 +96,7 @@
                   alt={item.name}
                 />
                 <p className="text-sm text-center mt-2">{item.name}</p>
+                
               </div>
             ))}
           </div>

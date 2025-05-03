@@ -30,7 +30,7 @@ function Header() {
   };
 
   return (
-    <header className="bg-base-100 shadow-sm px-4 py-2 w-full relative z-50">
+    <header className="sticky top-0 bg-base-100 shadow-sm px-4 py-2 w-full z-50">
       <div className="flex flex-wrap items-center justify-between max-w-7xl mx-auto">
 
         {/* Logo & Hamburger */}
@@ -109,9 +109,9 @@ function Header() {
 
               </>
             ) : (
-              <button className="btn !rounded-full px-6 py-2 border-none text-sm" onClick={() => navigate('/signup')}>
+              <span className="btn !rounded-full px-6 py-2 border-none text-sm" onClick={() => navigate('/signup')}>
                 Sign Up
-              </button>
+              </span>
             )}
           </div>
         </nav>

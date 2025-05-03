@@ -23,7 +23,7 @@ const signup= async (req,res)=>{
         const newUser = new userModel({ name,email,password:hashPassword,phoneNumber})
         const saved = await newUser.save()
 
-        const token =generateToken(saved._id)
+        const token = generateToken(saved._id)
         res.cookie("userToken",token)
 
         res.status(201).json({message:"Account Created",saved})
