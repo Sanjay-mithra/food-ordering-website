@@ -22,7 +22,7 @@ dbconnection()
 
 //middlewares
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://food-ordering-website-backend.vercel.app',
     credentials: true
   }));
 app.use(express.json())
