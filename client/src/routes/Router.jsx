@@ -9,7 +9,6 @@ import FoodDetails from "../pages/FoodDetails";
 import Cartpage from "../pages/Cartpage";
 import Orderpage from "../pages/Orderpage";
 import Signup from "../pages/Signup";
-import NotFound from "../pages/notFound";
 import PaymentSuccess from "../pages/paymentSuccess";
 import PaymentFailed from "../pages/paymentFailed";
 import CheckoutPage from "../pages/checkOutPage";
@@ -21,11 +20,12 @@ import AdminUsers from "../pages/AdminUsers";
 import AdminAddRestaurant from "../pages/AdminAddRestaurant";
 import AdminProfile from "../pages/AdminProfile";
 import RestaurantFoods from "../pages/RestaurantFoods";
+import PageNot from "../pages/PageNot";
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <Userlayout />,
-    errorElement: <NotFound />,
+    errorElement: <PageNot/>,
     children: [
       { path: "/", element: <Homepage /> },
       { path: "/cartpage", element: <Cartpage /> },
@@ -47,7 +47,7 @@ const routes = createBrowserRouter([
   {
     path: "/admin",
     element: <AdminLayout/>,
-    errorElement: <NotFound />,
+    errorElement: <PageNot/>,
     children: [
       { path: "", element: <AdminDashboard/> },
       { path: "allrestaurants", element: <AdminRestaurants/> },
